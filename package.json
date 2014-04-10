@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/GamingCoder/dataTester/issues"
   },
-  "homepage": "https://github.com/GamingCoder/dataTester"
+  "homepage": "https://github.com/GamingCoder/dataTester",
+  "devDependencies": {
+    "tape": "~2.12.3"
+  }
 }
