@@ -6,13 +6,13 @@ test('has properties and functions', function(t) {
 	var tester = new dataTester();
 
 	// Events
-	t.ok(typeof tester.emit == 'function');
-	t.ok(typeof tester.on == 'function');
+	t.ok(typeof tester.emit == 'function', 'emit function');
+	t.ok(typeof tester.on == 'function', 'on function');
 
 	// Tests
-	t.ok(typeof tester.tests == 'object');
-	t.ok(typeof tester.setTest == 'function');
-	t.ok(typeof tester.delTest == 'function');
+	t.ok(typeof tester.tests == 'object', 'tests object');
+	t.ok(typeof tester.setTest == 'function', 'setTest function');
+	t.ok(typeof tester.delTest == 'function', 'delTest function');
 });
 /*
 test('basic example', function(t) {
