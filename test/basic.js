@@ -2,7 +2,7 @@ var test = require('tape');
 var dataTester = require('../index.js');
 
 test('has properties and functions', function(t) {
-	t.plan(5);
+	t.plan(6);
 	var tester = new dataTester();
 
 	// Events
@@ -12,6 +12,7 @@ test('has properties and functions', function(t) {
 	// Tests
 	t.ok(typeof tester.tests == 'object', 'tests object');
 	t.ok(typeof tester.setTest == 'function', 'setTest function');
+	t.ok(typeof tester.getTest == 'function', 'getTest function');
 	t.ok(typeof tester.delTest == 'function', 'delTest function');
 });
 /*
