@@ -1,0 +1,24 @@
+{
+  "name": "dataTester",
+  "version": "0.0.0",
+  "description": "Test data and distribute it",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GamingCoder/dataTester"
+  },
+  "keywords": [
+    "data",
+    "test",
+    "analyse"
+  ],
+  "author": "Tobias Meyer (GamingCoder)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GamingCoder/dataTester/issues"
+  },
+  "homepage": "https://github.com/GamingCoder/dataTester"
+}
