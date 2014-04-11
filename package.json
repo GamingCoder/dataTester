@@ -1,6 +1,6 @@
 {
   "name": "dataTester",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Test data and distribute it",
   "main": "index.js",
   "scripts": {
