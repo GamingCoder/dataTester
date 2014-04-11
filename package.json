@@ -1,5 +1,5 @@
 {
-  "name": "dataTester",
+  "name": "datatester",
   "version": "0.0.1",
   "description": "Test data and distribute it",
   "main": "index.js",

@@ -5,7 +5,7 @@ Run tests against incoming data.
 # Sample
 ```js
 // require dataTester module
-var dataTester = require('dataTester');
+var dataTester = require('datatester');
 // Create new Instance
 var tester = new dataTester();
 
