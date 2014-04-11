@@ -10,6 +10,7 @@ function dataTester () {
 
 util.inherits(dataTester, EventEmitter);
 
+// core methods
 dataTester.prototype.setTest = function(name, test) {
 	this.tests[name] = test;
 };
@@ -19,5 +20,8 @@ dataTester.prototype.getTest = function(name) {
 dataTester.prototype.delTest = function(name) {
 	delete this.tests[name];
 };
+
+// aliases
+dataTester.prototype.addTest = dataTester.prototype.setTest;
 
 exports = module.exports = dataTester;
