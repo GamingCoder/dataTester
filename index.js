@@ -6,11 +6,16 @@ function dataTester () {
 
 	// Set empty tests object
 	this.tests = {};
+	this.setMaxListeners(0);
 
 	this.on('data', function(data) {
 		var result = this.test(data);
 		this.emit('result', result);
 		for (i in result.tests) this.emit(result.tests[i], result.data);
+	});
+
+	this.on('test', function(name, test) {
+		this.setTest(name, test);
 	});
 }
 
@@ -19,6 +24,7 @@ util.inherits(dataTester, EventEmitter);
 // core methods
 dataTester.prototype.setTest = function(name, test) {
 	this.tests[name] = test;
+	this.emit('newTest', name);
 };
 dataTester.prototype.getTest = function(name) {
 	return this.tests[name];
