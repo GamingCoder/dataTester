@@ -1,10 +1,6 @@
 var test = require('tape');
+var tests = require('./sample_tests.js')
 var dataTester = require('../index.js');
-
-// tests
-var stringTest = function(data) {
-	return typeof data == 'string';
-};
 
 test('tests object', function(t) {
 	t.plan(2);
@@ -19,7 +15,7 @@ test('add and get test', function(t) {
 	var tester = new dataTester();
 
 	// Add string test
-	tester.setTest('string', stringTest);
+	tester.setTest('string', tests.string);
 	t.equal(tester.getTest('string'), tester.tests['string'], 'getTest returns same result as direct access');
 
 });
@@ -29,7 +25,7 @@ test('del test', function(t) {
 	var tester = new dataTester();
 
 	// Add string test
-	tester.setTest('string', stringTest);
+	tester.setTest('string', tests.string);
 	tester.delTest('string');
 	t.equal(tester.getTest('string'), undefined, 'getTest returns undefined');
 
