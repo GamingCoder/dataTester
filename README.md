@@ -2,6 +2,11 @@
 
 Run tests against incoming data.
 
+# Installation
+```bash
+$ npm install datatester
+```
+
 # Sample
 ```js
 // require dataTester module
