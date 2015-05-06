@@ -15,17 +15,13 @@ test('emit and receive events', function(t) {
 });
 
 test('emit and receive events with tests', function(t) {
-	t.plan(6);
+	t.plan(3);
 	var tester = new dataTester();
 	
 	tester.addTest('string', tests.string);
 
 	tester.on('result', function(result) {
 		if(result.data == 'randomMessage') t.deepEqual(result.tests, ['string'], 'test should be string');
-	});
-
-	tester.on('string', function(data) {
-		t.equal(data, 'randomMessage', 'data received');
 	});
 
 	tester.emit('data', 'randomMessage');

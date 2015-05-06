@@ -11,16 +11,12 @@ test('tests object', function(t) {
 });
 
 test('add and get test', function(t) {
-	t.plan(3);
+	t.plan(1);
 	var tester = new dataTester();
 
-	// Add string test
-	tester.once('newTest', function(name) {
-		t.ok('received newTest event')
-		t.equal(name, 'string', 'newTest name should equal string');
-	});
 	tester.setTest('string', tests.string);
 	t.equal(tester.getTest('string'), tester.tests['string'], 'getTest returns same result as direct access');
+	t.end()
 
 });
 

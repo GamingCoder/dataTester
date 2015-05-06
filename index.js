@@ -11,11 +11,6 @@ function dataTester () {
 	this.on('data', function(data) {
 		var result = this.test(data);
 		this.emit('result', result);
-		for (i in result.tests) this.emit(result.tests[i], result.data);
-	});
-
-	this.on('test', function(name, test) {
-		this.setTest(name, test);
 	});
 }
 
